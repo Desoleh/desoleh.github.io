@@ -10917,7 +10917,7 @@ body {
   justify-content: space-between;
   min-width: 0;
   flex-grow: 1;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 122px);
   margin-left: -225px;
 }
 
@@ -11051,7 +11051,7 @@ body {
   flex-wrap: nowrap;
 }
 .sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
-  padding: 1.75rem 1rem 0.75rem;
+  padding: 0.75rem 0.25rem 0.25rem;
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
