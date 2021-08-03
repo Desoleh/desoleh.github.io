@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link rel="icon" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-brandnav navbar navbar-expand navbar-dark bg-purple">
+            <div class="container-fluid">
+            <img src="/assets/img/logo.png" alt="" height="60">
+        </nav>
+        <nav class="sb-topnav mt-6 navbar navbar-expand navbar-light bg-warning">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Beranda</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Nama Pegawai</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav mt-2">
+                            <!-- <div class="sb-sidenav-menu-heading">Core</div> -->
+                            <a class="btn btn-primary m-2" href="compose.html">
+                                Buat Memo Internal
+                            </a>
+                            
+                            <div class="accordion p-2" id="accordionPanelsStayOpenExample">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Kotak Masuk
+                                  </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                  <ol class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        Memo Masuk
+                                      </div>
+                                      <span class="badge bg-primary rounded-pill">14</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        Disposisi Masuk
+                                      </div>
+                                      <span class="badge bg-primary rounded-pill">14</span>
+                                    </li>
+                                  </ol>
+                                </div>
+                              </div>
+                              <br>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                    Kotak Keluar
+                                  </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+                                  <ol class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        Perlu Diproses
+                                      </div>
+                                      <span class="badge bg-primary rounded-pill">14</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        Status Memo
+                                      </div>
+                                      <span class="badge bg-primary rounded-pill">14</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        Konsep Surat
+                                      </div>
+                                      <span class="badge bg-primary rounded-pill">14</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        Memo Terkirim
+                                      </div>
+                                      <span class="badge bg-primary rounded-pill">14</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        Disposisi Terkirim
+                                      </div>
+                                      <span class="badge bg-primary rounded-pill">14</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        Batal
+                                      </div>
+                                      <span class="badge bg-primary rounded-pill">14</span>
+                                    </li>
+                                  </ol>
+                                </div>
+                              </div>
+                            </div>
+                            <a class="btn btn-primary m-2" href="index.html">
+                                kembali ke eoffice
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Nama Pegawai
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                  <div class="card m-2" id="memo-body">
+                    <div class="container">
+                        <table style="width: 100%;">
+                          <tbody>
+                            <tr></tr>
+                            <tr>
+                              <td id="memo" >MEMO INTERNAL</td>
+                              <td rowspan="3" "><img id="logomemo" src="assets/img/logo1.png" alt=""></td>
+                            </tr>
+                            <tr>
+                              <td id="kawisata">PT KA PARIWISATA</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        
+                        <table id="nomor">
+                          <tr>
+                            <td colspan="3">Jakarta, 3 Agustus 2021</td>
+                          </tr>
+                          <tr>
+                            <td><br></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>Nomor</td>
+                            <td>:</td>
+                            <td>XXX/KAWISATA/W2/VII/2021</td>
+                          </tr>
+                          <tr>
+                            <td>Lampiran</td>
+                            <td>:</td>
+                            <td>1 berkas</td>
+                          </tr>
+                          <tr>
+                            <td>Perihal</td>
+                            <td>:</td>
+                            <td>Perpanjangan Pengetatan Pelaksanaan WFH, WFO, Dan Protokol Kesehatan Sampai Dengan 2 Agustus 2021</td>
+                          </tr>
+                        </table>
+                        <br>
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>Kepada Yth</td>
+                            </tr>
+                            <tr>
+                              <td>Manager IT | IRFAN SOBARI | NIPP/NIP 11790011 </td>
+                            </tr>
+                            <tr>
+                              <td>di</td>
+                            </tr>
+                            <tr>
+                              <td>tempat</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <br>
+                        <table>
+                          <tr>
+                            <td>
+                          <ol><li><div style="text-align: justify;">Menunjuk :</div><ol style="list-style-type: lower-alpha;"><li style="text-align: justify;">Instruksi Menteri
+                          Dalam Negeri Republik Indonesi nomor 24 Tahun 2021 tentang pemberlakuan
+                          Pembatasan Kegiatan Masyarakat Level 4 dan Level 3 Corona Virus Disease 2019 di
+                          Wilayah Jawa dan Bali;</li><li style="text-align: justify;">Nota Dinas Nomor 1/KL.401/VII/D6/KA/2021
+                          Perihal Pengetatan Pelaksanaan WFH, WFO, Dan Protokol Kesehatan Selama Masa
+                          PPKM Darurat; dan</li><li style="text-align: justify;">Nota Dinas Nomor
+                          3/KL.401/VII/D6/KA/2021 Perihal Perpanjangan Pengetatan Pelaksanaan WFH, WFO,
+                          Dan Protokol Kesehatan Selama Masa PPKM Darurat.</li></ol></li><li><div style="text-align: justify;">Bahwa dengan mempertimbangkan:</div><ol style="list-style-type: lower-alpha;"><li style="text-align: justify;">Kebijakan Work From Home (WFH) 100% bagi pekerja administrasi perkantoran yang selama ini sudah berjalan cukup efektif, meskipun dalam pelaksanaannya masih terdapat rata-rata 5% pekerja administrasi perkantoran yang tetap melaksanakan pekerjaan secara Work From Office (WFO), mengingat masih terdapat pekerjaan yang bersifat penting / mendesak, dan hanya dapat dikerjakan menggunakan fasilitas kantor; </li><li style="text-align: justify;">Tingginya angka penularan Covid-19 terutama pada daerah level 3 dan 4 baik di Jawab dan Sumatera yang merupakan wilayah kerja perusahaan dan mempertimbangkan masa inkubasi Covid-19 selama kurang lebih 14 (emapat belas) hari setelah terpapar;</li><li style="text-align: justify;">Peningkatan kasus positif di PT KAI pada tanggal 22 Juli 2021 mencapai 57 (46 kasus baru, 11 alih status), yang diperkirakan berasal dari adanya mobilisasi pada periode H-5 dan hari H Idul Adha 1442 H;</li><li style="text-align: justify;">Ketentuan pelonggaran aktivitas dan mobilitas beberapa sektor usaha secara bertahap saat periode perpanjangan PPKM, yang berpotensi meningkatkan angka penularan pada masyarakat yang tetap melakukan mobilisasi jika tidak menerapkan protokol kesehatan dengan baik dan disiplin;</li></ol></li><li style="text-align: justify; ">Seluruh pekerja wajib melaksanakan ketentuan ini.</li><li style="text-align: justify; ">Demikian untuk dilaksanakan dengan sebaik-baiknya, terima kasih.&nbsp; &nbsp; &nbsp;</li></ol>
+                            </td>
+                          </tr>
+                        </table>
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>VP Corporate Communication</td>
+                            </tr>
+                            <tr>
+                              <td><img id="qrcode" src="assets/img/19930178-oncycle-Januari 2021.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                              <td style="font-weight: 700; text-decoration: underline;">IRFAN SOBARI</td>
+                            </tr>
+                            <tr>
+                              <td>NIPP/NIP 11790011</td>
+                            </tr>
+                            <tr>
+                              <td><br></td>
+                            </tr>
+                            <tr>
+                              <td>Tembusan:</td>
+                            </tr>
+                            <tr>
+                              <td>Manager Business Development | IRFAN SOBARI | NIPP/NIP 11790011</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <br>
+                        <table>
+                          <tr>
+                            <td style="width: 100%; text-align: center; font-style: italic;">Memo Internal ini telah di tandatangani secara elektronik 
+                            menggunakan Aplikasi Memo Internal KA Pariwisata 
+                            oleh VP Corporate Communication | IRFAN SOBARI | NIPP/NIP 11790011 pada 3 Agustus 2021, 23:41</td>
+                          </tr>
+                        </table>
+                    </div>
+                  </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- <script src="js/custom-select2.js"></script> -->
+        <script src="js/scripts.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+        $('.js-example-basic-multiple').select2();
+    });
+  </script>
+
+    </body>
+</html>

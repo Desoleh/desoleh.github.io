@@ -1,0 +1,131 @@
+
+#memo{
+  color:navy ;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-size: 16px;
+  vertical-align: bottom;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  #memo {
+  color:navy ;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-size: 24px;
+  vertical-align: bottom;
+  width: 100%;
+  }
+}
+
+#memo-body{
+  padding: 2rem;
+  font-size: 10px;
+}
+#memo-body ol{
+padding-left: 2%;
+}
+@media (min-width: 992px) {
+  #memo-body {
+  padding: 2rem;
+  font-size: 12px;
+  }
+}
+
+#qrcode{
+height: 65px;
+}
+@media (min-width: 992px) {
+  #qrcode {
+    height: 85px;
+  }
+}
+
+
+#kawisata{
+  color:rgb(247, 148, 0) ;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-size: 14px;
+  vertical-align: text-top;
+}
+@media (min-width: 992px) {
+  #kawisata {
+  color:rgb(247, 148, 0) ;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-size: 18px;
+  }
+}
+
+#logomemo{
+  height: 65px;
+}
+@media (min-width: 992px) {
+  #logomemo {
+  height: 75px;
+  }
+
+  #logomemo td{
+    width: 25%;
+  }
+}
+
+#nomor tr{
+  vertical-align: text-top;
+}
+
+#nomor td{
+  padding-right: 5px;
+}
+
+.memo {
+  position: relative;
+}
+
+.memo-item {
+  display: block;
+  width: 100%;
+  /* padding: 0.25rem 1rem; */
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.memo-item:hover, .memo-item:focus {
+  color: #1e2125;
+  background-color: #e9ecef;
+}
+.memo-item.active, .memo-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0d6efd;
+}
+.memo-item.disabled, .memo-item:disabled {
+  color: #adb5bd;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-header {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+.memo-item-text {
+  display: block;
+  padding: 0.25rem 1rem;
+  color: #212529;
+}
+
+/* .select2-selection.select2-selection--multiple {
+    min-height: 150px;
+} */
