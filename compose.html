@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Nota Dinas KA Pariwisata</title>
         <link rel="icon" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -21,13 +21,12 @@
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-brandnav navbar navbar-expand navbar-dark bg-purple">
-            <div class="container-fluid">
-            <img src="/assets/img/logo.png" alt="" height="60">
-        </nav>
-        <nav class="sb-topnav mt-6 navbar navbar-expand navbar-light bg-warning">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Beranda</a>
+            <nav class="navbar-brand ps-3">
+                <div class="container-fluid">
+                <img src="/assets/img/logo.png" alt="" height="60">
+            </nav>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -145,14 +144,16 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                <main>
-                    <div class="card m-3 p-2 card-composer">
-                      <div class="div card-header ">
+
+              <div id="cetak" class="card-body">
                         <a href="" class="btn btn-primary">Simpan</a>
                         <a href="" class="btn btn-primary">Kirim</a>
                         <a href="view.html" class="btn btn-primary">Pratinjau</a>
                         <a href="index.html" class="btn btn-primary">Tutup</a>
-                      </div>
+              </div>
+
+                <main>
+                    <div class="card m-3 p-2 card-composer">
                       <div class="optgroup" label="card-body">
                         <div class="row mb-3">
                           <label for="receiver" class="col-lg-2 d-none d-lg-block col-form-label">Perihal</label>
@@ -335,6 +336,8 @@
                       </div>
                     </div>
                 </main>
+
+
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
@@ -349,7 +352,7 @@
                 </footer>
             </div>
         </div>
-        <!-- <script src="js/custom-select2.js"></script> -->
+            <div class="container-fluid garis"></div>
         <script src="js/scripts.js"></script>
   <script>
     $(document).ready(function() {
