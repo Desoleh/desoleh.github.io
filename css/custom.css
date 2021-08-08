@@ -132,9 +132,36 @@
   z-index: 1039;
 }
 
+#memo-page {
+  page-break-after: always;
+}
+
+#ttd {
+  page-break-inside: avoid;
+}
+
+li {
+  page-break-inside: avoid;
+}
+
+#ttd td {
+  margin-top: 15px;
+}
+#memo-page {
+  overflow: visible !important;
+}
+
 @media print {
+  @page {
+    size: 210mm 297mm;
+    margin: 20mm 20mm 15mm 20mm;
+  }
+  #memo-page {
+    overflow: visible !important;
+  }
   #memo-body {
     padding: 0;
+    padding-bottom: 15px;
   }
 
   article {
@@ -156,11 +183,18 @@
     display: none;
   }
 
+  #cetak {
+    display: none;
+  }
+
   main {
     min-height: unset;
     /* position: absolute; */
-    margin-top: -75px;
-    padding-bottom: 55mm;
+    margin-top: -65px;
+    /* padding-bottom: 50mm; */
+    padding-left: 0;
+    padding-right: 0;
+    /* margin-bottom: 50mm; */
   }
 
   main .card {
@@ -169,7 +203,7 @@
 
   .page-footer,
   .page-footer-space {
-    height: 50px;
+    height: 40px;
   }
 
   .page-footer {
@@ -207,7 +241,7 @@
   background-color: orange;
   height: 10px;
   top: 56px;
-  z-index: 1500;
+  z-index: 1038;
 }
 
 .sb-nav-fixed #layoutSidenav #layoutSidenav_nav .sb-sidenav {
